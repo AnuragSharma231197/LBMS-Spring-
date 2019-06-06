@@ -5,4 +5,5 @@ public interface Dbutil_Interface {
 
 	public Connection getConnection();
 	
+	public void closeConnection();
 }

@@ -45,6 +45,8 @@ public class LoginDao implements AdminUserLogin{
 			e.printStackTrace();
 		}
 		
+		dbutil.closeConnection();
+		
 		return result;
 	}
 }

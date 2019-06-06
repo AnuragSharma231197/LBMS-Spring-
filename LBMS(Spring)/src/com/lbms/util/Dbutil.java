@@ -11,9 +11,9 @@ import com.lbms.interfaces.Dbutil_Interface;
 @Scope("prototype")
 public class Dbutil implements Dbutil_Interface {
 
+	Connection con;
 	
 	public Connection getConnection() {
-		Connection con=null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://localhost/springlbms","root","root");
@@ -23,5 +23,16 @@ public class Dbutil implements Dbutil_Interface {
 			e.printStackTrace();
 		}
 		return con;	
+	}
+	
+	@Override
+	public void closeConnection() {
+	
+		try {
+		con.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
