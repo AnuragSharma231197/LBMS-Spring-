@@ -43,7 +43,7 @@ public class Main {
 				int number=scan.nextInt();
 				
 				if(number==1) {
-					
+					System.out.println("Will do Something");
 				}
 				else if(number==2) {
 					
